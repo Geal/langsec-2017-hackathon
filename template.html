@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta name="description" content="Rust Parsers">
+        <meta name="author" content="Pierre Chifflier">
+
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+<!-- start of slides -->
+$if(title)$
+<section class="title-slide">
+  <h1 class="title">$title$</h1>
+  <footer>
+    <div class="author">
+      Geoffroy Couprie <div class="twitter"><a href="https://twitter.com/gcouprie">@gcouprie</a></div>
+    </div>
+    <div class="author">
+      Pierre Chifflier
+      <div class="twitter"><a href="https://twitter.com/pollux7">@pollux7</a></div>
+    </div>
+  </footer>
+</section>
+$endif$
+
+$body$
+
+<!-- end of slides -->
+            </div>
+        </div>
+
+
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.js"></script>
+
+        <script>
+Reveal.initialize({
+
+    width: "70%",
+    height: "100%",
+    margin: 0,
+    minScale: 1,
+    maxScale: 1,
+    slideNumber: 'c/t',
+
+
+	dependencies: [
+	{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+	{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+	{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+hljs.initHighlightingOnLoad(); } },
+	]
+});
+
+Reveal.configure({ transition: 'none' });
+
+// Shows the slide number using default formatting
+Reveal.configure({ slideNumber: true });
+
+// Slide number formatting can be configured using these variables:
+//  "h.v":  horizontal . vertical slide number (default)
+//  "h/v":  horizontal / vertical slide number
+//    "c":  flattened slide number
+//  "c/t":  flattened slide number / total slides
+Reveal.configure({ slideNumber: 'c/t' });
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
